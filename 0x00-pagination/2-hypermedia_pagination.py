@@ -70,11 +70,7 @@ class Server:
         # next and previous pages
         nextp = None if self.get_page(page + 1, page_size) == [] else page + 1
         data_dict["next_page"] = nextp
-        # if page == 1 or self.get_page(page - 1, page_size) == []:
-        #     data_dict["prev_page"] = None
-        # else:
-        #     data_dict["prev_page"] = page - 1
-        data_dict["prev_page"] = page - 1
+        data_dict["prev_page"] = None if page == 1 else page - 1
         data_dict["total_pages"] = total_pages
 
         return data_dict
