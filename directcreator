@@ -1,0 +1,6 @@
+#!/bin/bash
+mkdir $1
+echo $1 > $1/README.md
+cp gp2 $1/gp2
+cd $1
+
